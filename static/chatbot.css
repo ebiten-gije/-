@@ -1,0 +1,120 @@
+/* 컨테이너 설정 */
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 채팅 박스 설정 */
+.chat-box {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    background: linear-gradient(135deg, #dfe7fd 0%, #ffffff 100%); /* 배경색을 어둡게 조정 */
+}
+
+/* 메시지 영역 설정 */
+.messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 메시지 스타일 */
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    position: relative;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 사용자 메시지 스타일 */
+.user-message {
+    align-self: flex-end;
+    background-color: #a3d8f4;
+    border-bottom-right-radius: 0;
+}
+
+/* 봇 메시지 스타일 */
+.bot-message {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 0;
+}
+
+/* 메시지 꼬리 (삼각형) 추가 */
+.user-message::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid #a3d8f4;
+    border-top: 10px solid transparent;
+}
+
+.bot-message::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 10px solid #f1f1f1;
+    border-top: 10px solid transparent;
+}
+
+.message .time {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* 입력 박스 스타일 */
+.input-box {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 15px;
+    background-color: #e0e0e0; /* 입력 박스 배경색을 어둡게 조정 */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* 입력 필드 스타일 */
+input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    background-color: #f9f9f9; /* 입력 필드 배경색 */
+    outline: none;
+}
+
+/* 전송 버튼 스타일 */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
