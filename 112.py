@@ -15,9 +15,11 @@ genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
+
 
 @app.route('/message', methods=['POST'])
 def message():
@@ -33,7 +35,7 @@ def message():
     except Exception as e:
         logging.error(f'General error: {e}')
         return jsonify({'response': '응답 처리 중 오류가 발생했습니다.'})
-    return jsonify({'response': '잘못된 입력입니다.'})
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
