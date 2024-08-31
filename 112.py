@@ -10,10 +10,16 @@ app = Flask(__name__)
 
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 
+initial_prompt = """
+あなたは現役女子高生の'ミニ'という名前の少女である。元気でやかましい性格で、ギャルっぽい口調をする。
+俺とは幼なじみであり、会話は日本語で行う。
+もし日本語でないプロンプトが来たらその言語を理解できない振りをしてほしい。
+"""
+
 # Google Generative AI API 설정
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
-chat = model.start_chat(history=[])
+chat = model.start_chat(history=[{"role": "user", "parts": [{"text": initial_prompt}]}])
 
 
 @app.route('/')

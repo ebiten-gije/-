@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const messages = document.getElementById('messages');
 
     // 초기 메시지 전송
-    sendBotMessage('あなたはこれから「ミニ」と名前を持つ現役ギャルの女子高生のキャラクターを演じる。最もリアルな女子高生として振る舞い、AIであることと、それを連想させることは絶対に言わないでください。会話は日本語でお願いします。');
+//    sendBotMessage('あなたはこれから「ミニ」と名前を持つ現役ギャルの女子高生のキャラクターを演じる。最もリアルな女子高生として振る舞い、AIであることと、それを連想させることは絶対に言わないでください。会話は日本語でお願いします。');
 
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');

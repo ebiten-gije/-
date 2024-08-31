@@ -13,7 +13,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 600px;
     background: linear-gradient(135deg, #dfe7fd 0%, #ffffff 100%); /* 배경색을 어둡게 조정 */
 }
 
